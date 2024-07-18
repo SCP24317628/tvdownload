@@ -13,13 +13,13 @@ from cover import getCover
 from encode import ffmpegEncode
 from args import *
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.edge.options import Options
 
 def download(url):
   encode = 0 #不轉檔
-  action = input('要轉檔嗎?[y/n]')
+  action = input('要转档吗?[y/n]')
   if action.lower() == 'y':
-    action = input('選擇轉檔方案[1:僅轉換格式(默認,推薦) 2:NVIDIA GPU 轉檔 3:CPU 轉檔]')
+    action = input('选择转档方案[1:仅转换格式(默认,推荐) 2:NVIDIA GPU 转档 3:CPU 转档]')
     if action == '2':
        encode = 2 #GPU轉檔
     elif action == '3':
@@ -27,7 +27,7 @@ def download(url):
     else:
        encode = 1 #快速無損轉檔
 
-  print('正在下載影片: ' + url)
+  print('正在下载影片: ' + url)
   # 建立番號資料夾
   urlSplit = url.split('/')
   dirName = urlSplit[-2]
@@ -44,8 +44,9 @@ def download(url):
   options.add_argument('--disable-dev-shm-usage')
   options.add_argument('--disable-extensions')
   options.add_argument('--headless')
-  options.add_argument("user-agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36")
-  dr = webdriver.Chrome(options=options)
+  options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0")
+  dr = webdriver.Edge(options=options)
+  print("dr what", dr)
   dr.get(url)
   result = re.search("https://.+m3u8", dr.page_source)
   print(f'result: {result}')

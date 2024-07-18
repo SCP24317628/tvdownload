@@ -7,7 +7,7 @@ from selenium import webdriver
 
 def movieLinks(url):
   links = []
-  dr = webdriver.Chrome()
+  dr = webdriver.Edge()
   dr.get(url)
   bs = BeautifulSoup(dr.page_source,"html.parser")
   a_tags = bs.select('div.img-box>a')

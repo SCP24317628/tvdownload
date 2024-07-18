@@ -5,6 +5,7 @@ from functools import partial
 import concurrent.futures
 import time
 import copy
+import threading
 
 
 def scrape(ci, folderPath, downloadList, urls):
