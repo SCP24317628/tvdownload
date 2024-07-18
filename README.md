@@ -2,7 +2,7 @@
 
 
 ### 1.搭建环境
-本人使用了anaconda创建虚拟环境，所以还要安装anaconda
+本人使用了anaconda创建虚拟环境
 
 ```
 conda create --name jabletv 
@@ -21,19 +21,19 @@ python main.py
 ```
 ### 3.输入视频网址
 
-`https://jable.tv/videos/ipx-486/`    
+ps：`https://jable.tv/videos/ipx-486/`    
 
 
 ### 4.等待下载 
 要编码输入`y`，不要输入`n`   
 要用GPU加速(Nvidia)输入`y`，用CPU输入`n`   
 
-### 5.等待轉檔(Wait Encode) 
+### 5.等待编码
 
-### 6.完成(Finish)
+### 6.Finish
 
 
-### 如果覺得好用 再麻煩給個星星好評 謝謝!!
+### 
 ---
 
 
