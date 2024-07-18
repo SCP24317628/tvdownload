@@ -49,8 +49,3 @@ python main.py --random True
 ```
 
 
----
-### Windows 懒狗一键部署
-
-1. 安装 ffmpeg，安装后运行 INIT.bat 将会自动执行环境搭建。
-2. 若收到可以运行 RUN.bat 的信息，运行 RUN.bat 即可使用。
